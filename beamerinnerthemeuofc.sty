@@ -1,0 +1,67 @@
+% University of Calgary Beamer package.
+%
+% Copyright (C) 2021 University of Calgary (Jorge Monsegny)
+%
+% This program is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; either version 2 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program; if not, write to the Free Software
+% 
+
+\mode<presentation>
+
+% Options
+\DeclareOptionBeamer{style}{\def\beamer@uofc@style{#1}}    
+\ProcessOptionsBeamer
+
+% Font types
+\setbeamerfont{title}{size=\Huge,series=\bfseries,family=\rmfamily,shape=\upshape}
+\setbeamerfont{author}{size=\normalsize,series=\bfseries,family=\rmfamily,shape=\upshape}
+\setbeamerfont{date}{size=\Large,series=\bfseries,family=\rmfamily,shape=\upshape}
+\setbeamerfont{url}{size=\large,series=\bfseries,family=\rmfamily,shape=\slshape}
+
+% Slides backgrounds
+\setbeamertemplate{background}{
+  \ifnum\thepage>1\relax% For slides 2,3,... and so on
+   \begin{tikzpicture}
+    \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+    \node[anchor=south west] at (-0.20,-0.20)
+      {\includegraphics[scale=0.99]{uofcimg/\beamer@uofc@style wideslidebg.png}};    
+   \end{tikzpicture}    
+  \else% For slide 1 or title slide
+   \begin{tikzpicture}
+    \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+    \node[anchor=south west] at (-0.20,-0.20)
+      {\includegraphics[scale=0.99]{uofcimg/\beamer@uofc@style widetitlebg.png}};
+   \end{tikzpicture}   
+  \fi
+}
+
+% Title page
+\defbeamertemplate*{title page}{uofc}[1][]
+{ 
+   \vskip0.5cm%
+    \begin{beamercolorbox}[wd=\textwidth,leftskip=0.1cm,#1]{\beamer@uofc@style title}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \vskip0.5cm%
+    \begin{beamercolorbox}[wd=\textwidth,leftskip=0.1cm,#1]{\beamer@uofc@style author}
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+     \vskip0.75cm%
+    \begin{beamercolorbox}[wd=\textwidth,leftskip=0.1cm,#1]{\beamer@uofc@style date}
+      \usebeamerfont{date}\insertdate%
+    \end{beamercolorbox}
+  \vfill
+}
+
+\mode
+<all>
