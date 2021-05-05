@@ -14,29 +14,15 @@
 %
 % You should have received a copy of the GNU General Public License
 % along with this program; if not, write to the Free Software
-% Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-%
-
+% 
 
 \mode<presentation>
 
-% Requirement
-\RequirePackage{graphicx}
-\RequirePackage{tikz}
-
-% Options
-\DeclareOptionBeamer{style}{\PassOptionsToPackage{style=#1}{beamerinnerthemeuofc}}
-\DeclareOptionBeamer{miniframes}{\PassOptionsToPackage{miniframes=#1}{beamerouterthemeuofc}}
-\ProcessOptionsBeamer
-
-
-% Settings
-\useinnertheme{uofc}
-\useoutertheme{uofc}
-\usecolortheme{uofc}
-\usefonttheme{uofc}
-
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{blocks}[rounded][shadow=true]  
+% Font types
+\setbeamerfont{title}{size=\Huge,series=\bfseries,family=\rmfamily,shape=\upshape}
+\setbeamerfont{author}{size=\normalsize,series=\bfseries,family=\rmfamily,shape=\upshape}
+\setbeamerfont{date}{size=\Large,series=\bfseries,family=\rmfamily,shape=\upshape}
+\setbeamerfont{url}{size=\large,series=\bfseries,family=\rmfamily,shape=\slshape}
+\setbeamerfont{nav}{size=\tiny,series=\mdseries,family=\rmfamily,shape=\upshape}
 
 \mode<all>

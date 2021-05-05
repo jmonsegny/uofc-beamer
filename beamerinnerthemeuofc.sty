@@ -22,12 +22,6 @@
 \DeclareOptionBeamer{style}{\def\beamer@uofc@style{#1}}    
 \ProcessOptionsBeamer
 
-% Font types
-\setbeamerfont{title}{size=\Huge,series=\bfseries,family=\rmfamily,shape=\upshape}
-\setbeamerfont{author}{size=\normalsize,series=\bfseries,family=\rmfamily,shape=\upshape}
-\setbeamerfont{date}{size=\Large,series=\bfseries,family=\rmfamily,shape=\upshape}
-\setbeamerfont{url}{size=\large,series=\bfseries,family=\rmfamily,shape=\slshape}
-
 % Slides backgrounds
 \setbeamertemplate{background}{
   \ifnum\thepage>1\relax% For slides 2,3,... and so on
@@ -63,5 +57,4 @@
   \vfill
 }
 
-\mode
-<all>
+\mode<all>

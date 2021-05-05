@@ -18,18 +18,27 @@
 
 \mode<presentation>
 
+% Options
+\DeclareOptionBeamer{miniframes}{\def\beamer@uofc@miniframes{#1}}    
+\ProcessOptionsBeamer
+
 % Frame title
 \defbeamertemplate*{frametitle}{uofc}[1][]
-{
-    \vskip0.3cm%
-    \begin{beamercolorbox}[wd=\textwidth,leftskip=0.1cm,#1]{\beamer@uofc@style frametitle}
-      \usebeamerfont{frametitle}\insertframetitle%
-    \end{beamercolorbox}
-%     \begin{tikzpicture}
-%         \useasboundingbox(1.2,0.0) rectangle (\the\paperwidth,1.06);
-%         \node[anchor=west] at (1,0.33)% Title
-%          {\insertframetitle}; 
-%     \end{tikzpicture}        
+{    
+    \ifx\beamer@uofc@miniframes\@empty% Insert navigation above title
+        \vskip-0.3cm%
+        \begin{beamercolorbox}[wd=\paperwidth]{}
+            \usebeamerfont{nav}\insertnavigation{\paperwidth}%
+        \end{beamercolorbox}         
+        \begin{beamercolorbox}[wd=\textwidth,leftskip=0.1cm,#1]{\beamer@uofc@style frametitle}
+        \usebeamerfont{frametitle}\insertframetitle%
+        \end{beamercolorbox}
+    \else% Only title
+        \vskip0.3cm%
+        \begin{beamercolorbox}[wd=\textwidth,leftskip=0.1cm,#1]{\beamer@uofc@style frametitle}
+            \usebeamerfont{frametitle}\insertframetitle%
+        \end{beamercolorbox}
+    \fi
 }
 
 \mode<all>
