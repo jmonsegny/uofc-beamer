@@ -19,21 +19,33 @@ Other aspect ratios will fail.
 
 One of four styles should be used:
 
+# SIMPLE
+
 `\usetheme[style=simple]{uofc}`
-![Simple title slide example](./images/simpletitleslide.png)
-![Simple body slide example](./images/simplebodyslide.png) 
+<img src="./images/simpletitleslide.png" alt="Simple title slide example" width="50%"/>
+<img src="./images/simplebodyslide.png" alt="Simple body slide example" width="50%"/>
+
+# BOLD
 
 `\usetheme[style=bold]{uofc}`
-![Bold title slide example](./images/boldtitleslide.png)
-![Bold body slide example](./images/boldbodyslide.png) 
+<img src="./images/boldtitleslide.png" alt="Bold title slide example" width="50%"/>
+<img src="./images/boldbodyslide.png" alt="Bold body slide example" width="50%"/>
+
+# FLOURISH
 
 `\usetheme[style=flourish]{uofc}`
-![Flourish title slide example](./images/flourishtitleslide.png)
-![Flourish body slide example](./images/flourishbodyslide.png) 
+<img src="./images/flourishtitleslide.png" alt="Flourish title slide example" width="50%"/>
+<img src="./images/flourishbodyslide.png" alt="Flourish body slide example" width="50%"/>
+
+# CONSERVATIVE
 
 `\usetheme[style=conservative]{uofc}`
-![Conservative title slide example](./images/conservativetitleslide.png)
-![Conservative body slide example](./images/conservativebodyslide.png) 
+<img src="./images/conservativetitleslide.png" alt="Conservative title slide example" width="50%"/>
+<img src="./images/conservativebodyslide.png" alt="Conservative body slide example" width="50%"/>
+
+You can also use the miniframes option to have a navigation bar on top of the frames:
+
+`\usetheme[style=simple,miniframes]{uofc}`
 
 The packages files should be installed in Latex or at least in the
 same directory as the presentation.
@@ -45,6 +57,7 @@ The rest of the format follows Beamer conventions. See example.
 * beamerthemeuofc.sty
 * beamerouterthemeuofc.sty
 * beamerinnerthemeuofc.sty
+* beamerfontthemeuofc.sty
 * beamercolorthemeuofc.sty
 * Everything inside folder uofcimg
 
