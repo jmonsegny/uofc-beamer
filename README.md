@@ -22,24 +22,28 @@ One of four styles should be used:
 # SIMPLE
 
 `\usetheme[style=simple]{uofc}`
+
 <img src="./images/simpletitleslide.png" alt="Simple title slide example" width="50%"/>
 <img src="./images/simplebodyslide.png" alt="Simple body slide example" width="50%"/>
 
 # BOLD
 
 `\usetheme[style=bold]{uofc}`
+
 <img src="./images/boldtitleslide.png" alt="Bold title slide example" width="50%"/>
 <img src="./images/boldbodyslide.png" alt="Bold body slide example" width="50%"/>
 
 # FLOURISH
 
 `\usetheme[style=flourish]{uofc}`
+
 <img src="./images/flourishtitleslide.png" alt="Flourish title slide example" width="50%"/>
 <img src="./images/flourishbodyslide.png" alt="Flourish body slide example" width="50%"/>
 
 # CONSERVATIVE
 
 `\usetheme[style=conservative]{uofc}`
+
 <img src="./images/conservativetitleslide.png" alt="Conservative title slide example" width="50%"/>
 <img src="./images/conservativebodyslide.png" alt="Conservative body slide example" width="50%"/>
 
